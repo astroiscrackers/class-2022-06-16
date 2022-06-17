@@ -1,0 +1,27 @@
+---
+title: "Height"
+author: "John Pierson"
+date: '2022-06-17'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(primer.data)
+```
+
+Explore the height variable in the nhanes data set in the primer.data package.
+Histogram of Height
+
+```{r, warning=FALSE}
+ggplot(data = nhanes, 
+       mapping = aes(x = height,
+                     color = "steelblue")) + 
+geom_histogram(binwidth = 2.5)+
+theme(panel.grid.minor.x = element_blank())
+      
+```
+
+
+
