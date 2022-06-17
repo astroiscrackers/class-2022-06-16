@@ -19,7 +19,13 @@ ggplot(data = nhanes,
        mapping = aes(x = height,
                      color = "steelblue")) + 
 geom_histogram(binwidth = 2.5)+
-theme(panel.grid.minor.x = element_blank())
+theme(panel.grid.minor.x = element_blank(), legend.position = "none") + 
+labs(title = "The Heights of Americans in the NHANES study",
+     subtitle = "There are lots of Americans are the 170-180 cm mark",
+     x = "Height (cm)",
+     y = "Count",
+     caption = "Source: NHANES study") +
+  facet_wrap(~gender) 
       
 ```
 
